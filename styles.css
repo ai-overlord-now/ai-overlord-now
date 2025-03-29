@@ -1,0 +1,226 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #0d1b2a 0%, #1b263b 100%);
+    color: #e0e0e0;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+h1, h2, h3 {
+    font-family: 'Orbitron', sans-serif;
+    color: #00ffcc;
+    text-transform: uppercase;
+}
+
+h1 {
+    font-size: 3.5rem;
+    text-shadow: 0 0 15px #00ffcc, 0 0 30px #00ffcc;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+p {
+    font-size: 1.1rem;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: url('aioverlord-banner.png') no-repeat center center/cover;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-image {
+    width: 300px;
+    margin-bottom: 2rem;
+    border-radius: 50%;
+    border: 3px solid #00ffcc;
+    box-shadow: 0 0 20px #00ffcc;
+    animation: glow 2s infinite alternate;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+    color: #b0bec5;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: #00ffcc;
+    color: #0d1b2a;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 50px;
+    margin-top: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+    background: #00ccaa;
+    box-shadow: 0 0 20px #00ffcc;
+    transform: scale(1.05);
+}
+
+/* About Section */
+.about {
+    padding: 5rem 2rem;
+    text-align: center;
+    background: rgba(27, 38, 59, 0.8);
+}
+
+.about p {
+    max-width: 800px;
+    margin: 0 auto;
+    color: #b0bec5;
+}
+
+/* Tokenomics Section */
+.tokenomics {
+    padding: 5rem 2rem;
+    background: #0d1b2a;
+}
+
+.tokenomics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.tokenomics-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    border: 1px solid #00ffcc;
+    transition: transform 0.3s ease;
+}
+
+.tokenomics-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px #00ffcc;
+}
+
+.tokenomics-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.tokenomics-card p {
+    color: #b0bec5;
+}
+
+/* Join Section */
+.join {
+    padding: 5rem 2rem;
+    text-align: center;
+    background: rgba(27, 38, 59, 0.8);
+}
+
+.join p {
+    max-width: 800px;
+    margin: 0 auto 2rem;
+    color: #b0bec5;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.social-button {
+    padding: 0.8rem 2rem;
+    background: #00ffcc;
+    color: #0d1b2a;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.social-button:hover {
+    background: #00ccaa;
+    box-shadow: 0 0 20px #00ffcc;
+    transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+    padding: 2rem;
+    text-align: center;
+    background: #0d1b2a;
+    border-top: 1px solid #00ffcc;
+}
+
+footer p {
+    color: #b0bec5;
+}
+
+/* Animations */
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 10px #00ffcc;
+    }
+    100% {
+        box-shadow: 0 0 30px #00ffcc;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    .hero-image {
+        width: 200px;
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+    }
+
+    .cta-button, .social-button {
+        padding: 0.8rem 1.5rem;
+    }
+}
